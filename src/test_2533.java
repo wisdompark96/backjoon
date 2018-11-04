@@ -39,31 +39,39 @@ public class test_2533 {
             while (!queue.isEmpty()) {
                 node p = queue.poll();
                 int cnt = 0;
+                int isAr = 0;
+                int nAr = 0;
                 for (int j = 0; j < p.child.size(); j++) {
                     if(!p.child.get(j).isVisit) {
                         queue.offer(p.child.get(j));
                         cnt++;
                     }
+
+                    if(p.child.get(j).isAr)
+                        isAr++;
+                    else
+                        nAr++;
                 }
 
                 p.isVisit = true;
                 if(before != null) {
-                    if (!before.isAr) {
-                        if (cnt != 0) {
-                            p.isAr = true;
-                            sum++;
-                        } else {
-                            before.isAr = true;
-                            sum++;
+                    if (isAr < nAr) {
+
+                     p.isAr = true;
+                     sum++;
+                    }
+                }
+                if(before == null){
+                    before = p;
+                }
+                /*else {
+                    for (int j = 0; j < p.child.size(); j++) {
+                        if (p.child.get(j).isVisit) {
+                            before = p.child.get(j);
+                            break;
                         }
                     }
-                }
-                for (int j = 0; j < p.child.size(); j++) {
-                    if(p.child.get(j).isVisit) {
-                        before = p.child.get(j);
-                        break;
-                    }
-                }
+                }*/
             }
             if(i == 1)
                 break;
