@@ -1,86 +1,111 @@
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Scanner;
 
 public class test_2533 {
-    static node[] tree;
     public static void main(String[] args){
-        Scanner scanner = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
 
-        int n = scanner.nextInt();
-        tree = new node[n];
+        Queue<node> queue = new LinkedList<>();
+        int n = scan.nextInt();
+        node[] list = new node[n];
 
-        for(int i = 0; i < n; i++){
-            tree[i] = new node();
-        }
+        for(int i = 0; i < n; i++)
+            list[i] = new node(i+1);
 
         for(int i = 0; i < n-1; i++){
-            int p = scanner.nextInt();
-            int c = scanner.nextInt();
+            int p = scan.nextInt();
+            int c = scan.nextInt();
 
-            tree[p-1].addChild(tree[c-1]);
-            tree[c-1].addParent(tree[p-1]);
+            list[p-1].inputC(list[c-1]);
+            list[c-1].inputC(list[p-1]);
+
         }
 
-        ArrayList<node> p = new ArrayList<>();
-        for(int i = 0; i < n; i++){
-            if(tree[i].p == null)
-                p.add(tree[i]);
-        }
+        node first = null;
 
-        int sum = 0;
-        for(int i = 0; i < p.size(); i++)
-            sum += findNum(p.get(i));
-        System.out.print(sum);
-    }
+        first = list[0];
 
-    public static int findNum(node Node){
+        first.isAr = true;
 
-        int sum = 0;
-        if(Node.child.size() != 0){
+        queue.offer(first);
 
-            for(int i = 0; i < Node.child.size(); i++ ){
-                node child = Node.child.get(i);
-                sum += findNum(child);
+        int sum = 1;
+        int sum2 = 0;
+        for(int i = 0; i < 2; i++) {
+            node before = null;
+            while (!queue.isEmpty()) {
+                node p = queue.poll();
+                int cnt = 0;
+                for (int j = 0; j < p.child.size(); j++) {
+                    if(!p.child.get(j).isVisit) {
+                        queue.offer(p.child.get(j));
+                        cnt++;
+                    }
+                }
 
-                if(!child.isred) {
-                    Node.setIsred();
+                p.isVisit = true;
+                if(before != null) {
+                    if (!before.isAr) {
+                        if (cnt != 0) {
+                            p.isAr = true;
+                            sum++;
+                        } else {
+                            before.isAr = true;
+                            sum++;
+                        }
+                    }
+                }
+                for (int j = 0; j < p.child.size(); j++) {
+                    if(p.child.get(j).isVisit) {
+                        before = p.child.get(j);
+                        break;
+                    }
                 }
             }
+            if(i == 1)
+                break;
+
+            reset(list);
+            queue.offer(first);
+            sum2 = sum;
+            sum = 0;
         }
-        else{
-            return 0;
-        }
-
-        if(Node.isred)
-            sum++;
-
-        return sum;
 
 
+
+        if(sum> sum2)
+            System.out.print(sum2);
+        else
+            System.out.print(sum);
     }
 
+    public static void reset(node[] nodes){
+
+        for(int i = 0; i < nodes.length; i++) {
+            nodes[i].isAr = false;
+            nodes[i].isVisit = false;
+        }
+    }
     public static class node{
-        boolean isred;
-        ArrayList<node> child;
-        node p;
-        public node(){
-            isred = false;
+        int value;
+        ArrayList<node> child ;
+        boolean isAr;
+        boolean isVisit;
+
+        public node(int v){
+            value = v;
             child = new ArrayList<>();
+            isAr = false;
+            isVisit = false;
         }
 
-        void setIsred(){
-            isred = true;
-        }
 
-        void addChild(node n){
+        public void inputC(node n){
             child.add(n);
         }
-
-        void addParent(node n){
-            p = n;
-        }
-
-
-
     }
+
 }
