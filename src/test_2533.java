@@ -58,6 +58,7 @@ public class test_2533 {
                     if (isAr < nAr) {
 
                      p.isAr = true;
+//                     System.out.print(p.value+",");
                      sum++;
                     }
                 }
@@ -65,7 +66,7 @@ public class test_2533 {
                     before = p;
                 }
                 /*else {
-                    for (int j = 0; j < p.child.size(); j++) {
+                    for (i nt j = 0; j < p.child.size(); j++) {
                         if (p.child.get(j).isVisit) {
                             before = p.child.get(j);
                             break;
@@ -76,6 +77,7 @@ public class test_2533 {
             if(i == 1)
                 break;
 
+//            System.out.println("/");
             reset(list);
             queue.offer(first);
             sum2 = sum;
