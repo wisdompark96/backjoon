@@ -1,7 +1,7 @@
+import java.math.BigInteger;
 import java.util.Scanner;
 
 public class test_2407 {
-    public static int[][] memo;
 
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
@@ -9,43 +9,23 @@ public class test_2407 {
         int n = scanner.nextInt();
         int m = scanner.nextInt();
 
-        int[] bucket = new int[m];
-        memo = new int[m][n];
-
-        System.out.print(combine(bucket, n, m, m));
-
-    }
-
-    public static long combine(int[] bucket, int n, int m, int p){
-
-        long sum = 0;
-        if(p == 0){
-            return 1;
-        }
-
-        int lastIndex = m-p-1;
-
-        for(int i = 0; i < n; i++){
-            if(p == m){
-                if(i > n-m)
-                    break;
-                bucket[0] = i;
-                sum +=  combine(bucket, n, m, p - 1);
-            }
-
-            else if(bucket[lastIndex] < i){
-                bucket[lastIndex+1] = i;
-                if(memo[lastIndex+1][i] == 0) {
-                    memo[lastIndex + 1][i] += combine(bucket, n, m, p - 1);
-                    sum += memo[lastIndex + 1][i];
-                }
-
+        BigInteger[][] memo = new BigInteger[n+1][n+1];
+        memo[0][0] = BigInteger.ONE;
+        memo[1][0] = BigInteger.ONE;
+        memo[1][1] = BigInteger.ONE;
+        for(int i = 2; i <= n; i++){
+            for(int j = 0; j <= i; j++){
+                if(j == 0 || j == i)
+                    memo[i][j] = BigInteger.ONE;
                 else
-                    sum += memo[lastIndex+1][i];
-
+                    memo[i][j] = memo[i-1][j-1].add(memo[i-1][j]);
+                if(i == n && j == m)
+                    break;
             }
         }
 
-        return sum;
+        System.out.print(memo[n][m]);
+
     }
+
 }
