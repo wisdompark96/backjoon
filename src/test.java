@@ -1,24 +1,20 @@
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
 import java.util.Scanner;
 
 public class test {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        int m = sc.nextInt();
+        int a = 2;
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-        System.out.println(String.format("%.0f", DP(n,m)));
-
-        sc.close();
+        if(a == 1)
+            bw.write(0);
+        else
+            bw.write(0);
+        bw.flush();
+        bw.close();
     }
-    public static double DP(int n, int m) {
-        int b = Math.min(n-m, m);
 
-        double k = (double) n;
-        double val = 1;
-        for(int i=b; i>0; i--) {
-            val *= k--/i;
-        }
-        return val;
-    }
 }
