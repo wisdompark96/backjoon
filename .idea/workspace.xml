@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="25ec9a24-444f-417d-a55f-84fbc90180f0" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test_2606.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/backjoon/test_2178.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/backjoon/test_2178.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test_2178.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test_2178.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -112,11 +112,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test_2178.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="test_2178.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test_2178.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="36" column="35" selection-start-line="36" selection-start-column="35" selection-end-line="36" selection-end-column="35" />
+            <state relative-caret-position="114">
+              <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_2606.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test_2606.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="350">
+              <caret line="41" column="5" lean-forward="true" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -132,15 +144,6 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test_1676.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test_1676.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -180,6 +183,7 @@
         <option value="$PROJECT_DIR$/src/test_7576.java" />
         <option value="$PROJECT_DIR$/src/test_7569.java" />
         <option value="$PROJECT_DIR$/src/test_2178.java" />
+        <option value="$PROJECT_DIR$/src/test_2606.java" />
       </list>
     </option>
   </component>
@@ -199,8 +203,8 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1172" />
-    <option name="y" value="23" />
+    <option name="x" value="785" />
+    <option name="y" value="7" />
     <option name="width" value="980" />
     <option name="height" value="1055" />
   </component>
@@ -268,7 +272,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.test_2178">
+  <component name="RunManager" selected="Application.test_2606">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -277,13 +281,13 @@
       <module name="backjoon" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
-    <configuration name="test_1022" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test_1022" />
+    <configuration name="test_2178" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test_2178" />
       <module name="backjoon" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
-    <configuration name="test_2178" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test_2178" />
+    <configuration name="test_2606" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test_2606" />
       <module name="backjoon" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -336,19 +340,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="Application.test_1022" />
       <item itemvalue="Application.test_7576" />
       <item itemvalue="Application.test" />
       <item itemvalue="Application.test_7569" />
       <item itemvalue="Application.test_2178" />
+      <item itemvalue="Application.test_2606" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.test_2606" />
         <item itemvalue="Application.test_2178" />
         <item itemvalue="Application.test_7569" />
         <item itemvalue="Application.test_7576" />
         <item itemvalue="Application.test" />
-        <item itemvalue="Application.test_1022" />
       </list>
     </recent_temporary>
   </component>
@@ -382,12 +386,12 @@
       <workItem from="1546781221454" duration="7040000" />
       <workItem from="1547019662744" duration="23596000" />
       <workItem from="1547306493053" duration="6702000" />
-      <workItem from="1547425486140" duration="2478000" />
+      <workItem from="1547425486140" duration="4320000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="161893000" />
+    <option name="totallyTimeSpent" value="163735000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -399,7 +403,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="762" y="0" width="781" height="840" extended-state="0" />
+    <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="1" />
@@ -408,15 +412,15 @@
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.5228849" side_tool="true" visible="true" weight="0.3883357" />
+      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.5013423" side_tool="true" visible="true" weight="0.3305204" />
       <window_info anchor="right" id="Maven Projects" order="2" sideWeight="0.4988399" weight="0.32872927" />
       <window_info anchor="bottom" id="Database Changes" order="5" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="6" sideWeight="0.49932885" weight="0.32911393" />
-      <window_info active="true" anchor="bottom" id="Run" order="4" sideWeight="0.47711512" visible="true" weight="0.3883357" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49932885" weight="0.33192685" />
+      <window_info anchor="bottom" id="Version Control" order="6" sideWeight="0.4986577" weight="0.32911393" />
+      <window_info anchor="bottom" id="Run" order="4" sideWeight="0.47785234" weight="0.38396624" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.4986577" visible="true" weight="0.3305204" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.34119278" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16510066" />
       <window_info anchor="right" id="Database" order="6" weight="0.3295302" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="3" weight="0.24966443" />
@@ -483,7 +487,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test_2178.java</url>
-          <line>36</line>
+          <line>40</line>
           <properties class="test_2178" method="BFS">
             <option name="EMULATED" value="true" />
           </properties>
@@ -540,16 +544,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/kakao1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="2" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
@@ -883,8 +877,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test_2178.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="36" column="35" selection-start-line="36" selection-start-column="35" selection-end-line="36" selection-end-column="35" />
+        <state relative-caret-position="114">
+          <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test_2606.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="41" column="5" lean-forward="true" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

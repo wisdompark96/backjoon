@@ -4,7 +4,11 @@ import java.io.InputStreamReader;
 import java.util.Scanner;
 import java.util.StringTokenizer;
 import java.util.concurrent.LinkedBlockingQueue;
-
+/*
+풀긴 풀었는데 단거리 구한느문제가 아닌것 같다...
+뭔가 찝찝...
+BFS로 탐색했다.
+ */
 public class test_2178 {
     static LinkedBlockingQueue<Integer[]> queue;
     static int[][] memo;
